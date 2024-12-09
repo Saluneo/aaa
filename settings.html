@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>个性化设置 - 我们的故事</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/settings.css">
+        <link rel="stylesheet" href="animations.css">
+        <script src="js/theme.js"></script>
+        <script src="js/decorations.js" defer></script>
+        <script src="js/animations.js" defer></script>
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">我们的故事</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="diary.html">日记本</a></li>
+            <li><a href="album.html">相册</a></li>
+            <li><a href="tasks.html">愿望清单</a></li>
+            <li><a href="settings.html" class="settings-link active">
+                <span class="settings-icon">⚙️</span> 设置
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="settings-panel">
+            <h2>个性化设置</h2>
+            
+            <!-- 主题设置 -->
+            <section class="settings-section">
+                <h3>主题设置</h3>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="pink" style="background-color: #FF69B4;">
+                        <span>粉色</span>
+                    </div>
+                    <div class="theme-option" data-theme="blue" style="background-color: #87CEEB;">
+                        <span>蓝色</span>
+                    </div>
+                    <div class="theme-option" data-theme="purple" style="background-color: #DDA0DD;">
+                        <span>紫色</span>
+                    </div>
+                    <div class="theme-option" data-theme="green" style="background-color: #98FB98;">
+                        <span>绿色</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 背景音乐 -->
+            <section class="settings-section">
+                <h3>背景音乐</h3>
+                <div class="music-player">
+                    <select id="musicSelect" class="music-select">
+                        <option value="">选择音乐...</option>
+                        <option value="music1.mp3">温柔的风</option>
+                        <option value="music2.mp3">浪漫时光</option>
+                        <option value="music3.mp3">甜蜜回忆</option>
+                    </select>
+                    <div class="music-controls">
+                        <button id="playMusic" class="btn-music">播放</button>
+                        <input type="range" id="volumeControl" min="0" max="100" value="50">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 字体设置 -->
+            <section class="settings-section">
+                <h3>字体设置</h3>
+                <div class="font-settings">
+                    <select id="fontFamily" class="font-select">
+                        <option value="default">默认字体</option>
+                        <option value="serif">宋体</option>
+                        <option value="sans-serif">黑体</option>
+                        <option value="cursive">手写体</option>
+                    </select>
+                    <div class="font-size-control">
+                        <span>字体大小：</span>
+                        <button id="decreaseFont" class="btn-font">A-</button>
+                        <button id="increaseFont" class="btn-font">A+</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 动画效果 -->
+            <section class="settings-section">
+                <h3>动画效果</h3>
+                <div class="animation-settings">
+                    <label class="switch">
+                        <input type="checkbox" id="enableAnimations" checked>
+                        <span class="slider round"></span>
+                        <span class="switch-label">启用动画效果</span>
+                    </label>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/settings.js"></script>
+</body>
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>日记本 - 我们的故事</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/diary.css">
+        <link rel="stylesheet" href="animations.css">
+        <script src="js/theme.js"></script>
+        <script src="js/decorations.js" defer></script>
+        <script src="js/animations.js" defer></script>
+    </head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">我们的故事</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="diary.html" class="active">日记本</a></li>
+            <li><a href="album.html">相册</a></li>
+            <li><a href="tasks.html">愿望清单</a></li>
+            <li><a href="settings.html" class="settings-link">
+                <span class="settings-icon">⚙️</span> 设置
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- 日记编辑区 -->
+        <div class="diary-editor">
+            <div class="diary-header">
+                <input type="date" id="diaryDate" class="diary-date">
+                <div class="mood-selector">
+                    <span>今日心情：</span>
+                    <select id="moodSelect">
+                        <option value="happy">😊 开心</option>
+                        <option value="love">🥰 甜蜜</option>
+                        <option value="sad">😢 难过</option>
+                        <option value="angry">😡 生气</option>
+                        <option value="normal">😐 一般</option>
+                    </select>
+                </div>
+            </div>
+            <input type="text" id="diaryTitle" class="diary-title" placeholder="给今天的日记起个标题吧...">
+            <textarea id="diaryContent" class="diary-content" placeholder="记录今天的点点滴滴..."></textarea>
+            <div class="diary-images">
+                <div class="image-upload-container">
+                    <div id="imagePreviewArea" class="image-preview-area"></div>
+                    <div class="image-upload-button">
+                        <label for="imageUpload" class="upload-label">
+                            <span>📷 添加图片</span>
+                            <input type="file" id="imageUpload" accept="image/*" multiple style="display: none;">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="diary-footer">
+                <button id="saveDiary" class="btn-save">保存日记</button>
+            </div>
+        </div>
+
+        <!-- 日记列表 -->
+        <div class="diary-list">
+            <h2>日记列表</h2>
+            <div id="diaryEntries"></div>
+        </div>
+    </main>
+
+    <script src="js/diary.js"></script>
+</body>
+</html>

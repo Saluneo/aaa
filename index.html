@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferris Wheel & Fireworks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 添加装饰性元素 -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="corner-decoration top-left"></div>
+    <div class="corner-decoration top-right"></div>
+    <div class="corner-decoration bottom-left"></div>
+    <div class="corner-decoration bottom-right"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-brand">我们的故事</div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="diary.html">日记本</a></li>
+            <li><a href="album.html">相册</a></li>
+            <li><a href="tasks.html">愿望清单</a></li>
+            <li><a href="settings.html" class="settings-link">
+                <span class="settings-icon">⚙️</span> 设置
+            </a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="container">
+        <!-- 恋爱计时器 -->
+        <div class="love-timer">
+            <h2>我们在一起已经</h2>
+            <div class="timer">0 天</div>
+        </div>
+
+        <!-- 最新照片展示 -->
+        <div class="photo-wall">
+            <h2>美好瞬间</h2>
+            <div class="photo-grid">
+                <div class="photo-item">添加照片</div>
+                <div class="photo-item">添加照片</div>
+                <div class="photo-item">添加照片</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

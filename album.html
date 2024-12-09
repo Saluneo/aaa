@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册 - 我们的故事</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="animations.css">
+    <script src="js/theme.js"></script>
+    <script src="js/decorations.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">我们的故事</div>
+        <ul class="nav-menu">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="diary.html">日记本</a></li>
+            <li><a href="album.html" class="active">相册</a></li>
+            <li><a href="tasks.html">愿望清单</a></li>
+            <li><a href="settings.html" class="settings-link">
+                <span class="settings-icon">⚙️</span> 设置
+            </a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- 相册管理 -->
+        <div class="album-controls">
+            <button id="createAlbum" class="btn-create">创建相册</button>
+            <div class="album-search">
+                <input type="text" id="searchAlbum" placeholder="搜索相册...">
+            </div>
+        </div>
+
+        <!-- 相册列表 -->
+        <div class="albums-grid" id="albumsContainer">
+            <!-- 相册将通过 JavaScript 动态添加 -->
+        </div>
+
+        <!-- 创建相册弹窗 -->
+        <div id="albumModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>创建新相册</h2>
+                <input type="text" id="albumName" placeholder="相册名称">
+                <input type="date" id="albumDate" placeholder="日期">
+                <textarea id="albumDescription" placeholder="相册描述..."></textarea>
+                <div class="album-cover-upload">
+                    <label for="albumCover">选择封面图片</label>
+                    <input type="file" id="albumCover" accept="image/*">
+                </div>
+                <button id="saveAlbum" class="btn-save">保存相册</button>
+            </div>
+        </div>
+
+        <!-- 查看相册弹窗 -->
+        <div id="viewAlbumModal" class="modal">
+            <div class="modal-content modal-large">
+                <span class="close">&times;</span>
+                <div id="albumDetails">
+                    <h2 id="viewAlbumName"></h2>
+                    <p id="viewAlbumDate"></p>
+                    <p id="viewAlbumDescription"></p>
+                </div>
+                <div class="album-photos" id="albumPhotos">
+                    <div class="photo-upload-area">
+                        <label for="photoUpload">
+                            <span>+ 添加照片</span>
+                            <input type="file" id="photoUpload" accept="image/*" multiple>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/album.js"></script>
+</body>
+</html> 
