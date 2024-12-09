@@ -1,0 +1,12 @@
+# 创建文件夹
+mkdir css
+mkdir js
+
+# 移动文件到对应文件夹
+mv style.css css/
+mv animations.js js/
+
+# 添加到 Git
+git add .
+git commit -m "Reorganize file structure"
+git push origin main
